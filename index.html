@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>SMA INTERNASIONAL PODOMORO TENJO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+    <h2 class="logo">SMA INTERNASIONAL PODOMORO TENJO</h2>
+
+    <i class="fas fa-bars hamburger" id="hamburger"></i>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#profil">Profil</a></li>
+      <li><a href="#guru">Guru</a></li>
+      <li><a href="#siswa">Siswa</a></li>
+      <li><a href="#berita">Berita</a></li>
+      <li><a href="#galeri">Galeri</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>BEST SCHOOL IN PODOMORO TENJO</h1>
+  </div>
+</section>
+
+
+
+<!-- PROFIL -->
+<section id="profil" class="section">
+  <h2 class="section-title">Profil Sekolah</h2>
+  <p class="center-text">
+    SMA INTERNASIONAL PODOMORO TENJO merupakan sekolah unggulan dengan tenaga pendidik profesional
+    serta fasilitas lengkap untuk menunjang prestasi siswa. dengan visi misi menjadi sekolah menengah bertaraf internasional yang unggul dalam akademik, karakter, dan teknologi untuk mencetak generasi pemimpin masa depan yang berdaya saing global.
+    Menyelenggarakan pendidikan berkualitas berbasis nasional dan internasional dan mengembangkan karakter siswa yang berintegritas, disiplin, dan berwawasan global. serta Mengintegrasikan teknologi digital dalam proses pembelajaran. Mendorong prestasi akademik dan non-akademik di tingkat nasional dan internasional, Membekali siswa dengan keterampilan abad ke-21 (critical thinking, creativity, collaboration, communication).
+  </p>
+</section>
+
+<!-- DATA GURU -->
+<section id="guru" class="section">
+  <h2 class="section-title">Data Guru</h2>
+
+  <form id="guruForm" class="form">
+    <input type="text" id="namaGuru" placeholder="Nama Guru" required>
+    <input type="text" id="mapelGuru" placeholder="Mata Pelajaran" required>
+    <input type="file" id="fotoGuru" accept="image/*" required>
+    <button type="submit">Tambah Guru</button>
+  </form>
+
+  <div class="table-wrapper">
+    <table class="modern-table">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Foto</th>
+          <th>Nama Guru</th>
+          <th>Mata Pelajaran</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="guruTable"></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- DATA SISWA -->
+<section id="siswa" class="section">
+  <h2 class="section-title">Data Siswa</h2>
+
+  <form id="siswaForm" class="form">
+    <input type="text" id="namaSiswa" placeholder="Nama Siswa" required>
+    <input type="text" id="kelasSiswa" placeholder="Kelas" required>
+    <input type="text" id="nipSiswa" placeholder="NIP Siswa" required>
+    <input type="file" id="fotoSiswa" accept="image/*" required>
+    <button type="submit">Tambah Siswa</button>
+  </form>
+
+  <div class="table-wrapper">
+    <table class="modern-table">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Foto</th>
+          <th>Nama Siswa</th>
+          <th>Kelas</th>
+          <th>NIP</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="siswaTable"></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- BERITA -->
+<section id="berita" class="section gray">
+  <h2 class="section-title">Berita & Event</h2>
+
+  <form id="beritaForm" class="form">
+    <input type="text" id="judulBerita" placeholder="Judul Berita" required>
+    <textarea id="isiBerita" placeholder="Isi Berita" required></textarea>
+    <input type="file" id="fotoBerita" accept="image/*" required>
+    <button type="submit">Tambah Berita</button>
+  </form>
+
+  <div class="grid" id="beritaList"></div>
+</section>
+
+<!-- GALERI -->
+<section id="galeri" class="section">
+  <h2 class="section-title">Galeri Sekolah</h2>
+  <div class="grid">
+    <img src="https://www.kalderanews.com/wp-content/uploads/2022/03/Siswa-sekolah-internasional.-Ist.-e1648030040130.jpg" class="gallery">
+    <img src="https://www.kalderanews.com/wp-content/uploads/2024/01/Siswa-Mentari-Intercultural-School-Jakarta.-dok.sekolah.jpg" class="gallery">
+    <img src="https://portaltrust.org/uploads/images/_1200x728_crop_center-center_80_none/SASS-Laptop-Thumbnail.png" class="gallery">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/f1129879129165.5cbd21c74c9d9.jpg" class="gallery">
+  
+  </div>
+</section>
+
+<footer>
+  <p></p>
+</footer>
+
+<script src="navbar.js"></script>
+<script src="guru.js"></script>
+<script src="siswa.js"></script>
+<script src="berita.js"></script>
+</body>
+</html>

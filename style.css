@@ -1,0 +1,285 @@
+
+:root{
+  --bg:#0b0f1a;
+  --card:#12182b;
+  --accent:#6366f1;
+  --accent2:#22d3ee;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --shadow:0 20px 40px rgba(0,0,0,.6);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:radial-gradient(circle at top,var(--card),var(--bg));
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(12px);
+  background:rgba(18,24,43,.8);
+  box-shadow:var(--shadow);
+}
+
+nav{
+  max-width:1200px;
+  margin:auto;
+  padding:16px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav h1{
+  font-size:22px;
+  font-weight:700;
+  background:linear-gradient(45deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:24px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:var(--text);
+  font-weight:500;
+  position:relative;
+}
+
+nav ul li a::after{
+  content:"";
+  position:absolute;
+  width:0;
+  height:2px;
+  background:var(--accent);
+  left:0;
+  bottom:-6px;
+  transition:.3s;
+}
+
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:6px;
+  cursor:pointer;
+}
+
+.hamburger span{
+  width:26px;
+  height:3px;
+  background:var(--text);
+  border-radius:4px;
+}
+
+@media(max-width:768px){
+  nav{
+    position:relative;
+  }
+
+  nav ul{
+    position:absolute;
+    top:70px;
+    right:0;
+    background:var(--card);
+    width:220px;
+    flex-direction:column;
+    padding:20px;
+    border-radius:16px;
+    display:none;
+    box-shadow:var(--shadow);
+  }
+
+  nav ul.active{
+    display:flex;
+  }
+
+  .hamburger{
+    display:flex;
+    margin-left:auto;
+  }
+}
+
+
+nav ul li a:hover::after{width:100%;}
+
+.hero {
+  height: 85vh;
+  background: url("https://cdn-brilio-net.akamaized.net/news/2016/02/02/40719/162905-sekolah-mewah.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.slide{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition:opacity 1s ease;
+}
+
+.slide.active{opacity:1;}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom,rgba(0,0,0,.2),var(--bg));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero-content h1{
+  font-size:56px;
+  font-weight:700;
+}
+
+.hero-content p{
+  margin-top:12px;
+  font-size:18px;
+  color:var(--muted);
+}
+
+.section{
+  padding:100px 10%;
+}
+
+.section-title{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:50px;
+  position:relative;
+}
+
+.section-title::after{
+  content:"";
+  width:80px;
+  height:4px;
+  background:linear-gradient(45deg,var(--accent),var(--accent2));
+  display:block;
+  margin:16px auto 0;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:32px;
+}
+
+.card{
+  background:linear-gradient(145deg,#151c33,#0e1426);
+  padding:32px;
+  border-radius:20px;
+  box-shadow:var(--shadow);
+  transition:.4s;
+}
+
+.card:hover{
+  transform:translateY(-12px) scale(1.03);
+}
+
+.form{
+  background:var(--card);
+  padding:32px;
+  border-radius:20px;
+  box-shadow:var(--shadow);
+  margin-bottom:40px;
+}
+
+.form input,.form button{
+  width:100%;
+  padding:14px;
+  margin-top:12px;
+  border-radius:12px;
+  border:none;
+  background:#0f172a;
+  color:var(--text);
+}
+
+.form button{
+  background:linear-gradient(45deg,var(--accent),var(--accent2));
+  font-weight:600;
+  cursor:pointer;
+}
+
+.table-wrapper{
+  overflow-x:auto;
+}
+
+.modern-table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0 14px;
+}
+
+.modern-table th{
+  color:var(--muted);
+  font-weight:500;
+}
+
+.modern-table tbody tr{
+  background:linear-gradient(145deg,#141b31,#0c1224);
+  box-shadow:var(--shadow);
+}
+
+.modern-table td, .modern-table th{
+  padding:16px;
+}
+
+.modern-table img{
+  width:48px;
+  height:48px;
+  object-fit:cover;
+  border-radius:50%;
+}
+
+.modern-table button{
+  background:#ef4444;
+  border:none;
+  color:white;
+  padding:8px 14px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:1s;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:none;
+}
+
+@media(max-width:768px){
+  nav ul{display:none;}
+  .hero-content h1{font-size:38px;}
+}
