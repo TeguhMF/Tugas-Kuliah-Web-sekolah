@@ -1,2 +1,1 @@
-# Tugas-Kuliah-Web-sekolah
-statis web html css js
+https://reliable-taiyaki-0ad6bc.netlify.app/
